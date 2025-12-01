@@ -1,11 +1,11 @@
 # bottlelab
 
-## Project setup
+## Inicie o NPM
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Inicie o servidor de desenvolvimento
 ```
 npm run serve
 ```
@@ -15,5 +15,12 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Instale o Json Server
+```
+npm install json-server
+```
+
+### Inicie a API
+```
+npm run backend
+```
