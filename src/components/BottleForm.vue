@@ -44,12 +44,11 @@
             </div>
            
             <div id="OptionalsContainer" class="input-container">
-              <Label id="OptionalTittle" for="Optional">Selecione a cor da garrafa</label>
-                <div class="checkbox-container">
-                  <input type="checkbox" name="opcionais" v-model="opcionais" value="rosa">
-                  <span>Rosa</span>
-                  <input type="checkbox" name="opcionais" v-model="opcionais" value="preta" checked>
-                  <span>Preta</span>
+              <Label id="OptionalTittle" for="Optional">Selecione os opcionais</label>
+                <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
+                  <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+                  <span>{{ opcional.tipo }}</span>
+
                 </div>
 
             </div>
@@ -88,6 +87,7 @@ export default {
       this.BottleBodies = dataFromJason.BottleBodies;
       this.BottleNameTags = dataFromJason.BottleNameTags;
       this.BottleNameTagSizes = dataFromJason.BottleNameTagSizes;
+      this.opcionaisdata = dataFromJason.opcionais;
 
     }
   },
