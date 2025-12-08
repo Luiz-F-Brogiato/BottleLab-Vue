@@ -10,27 +10,25 @@
             </div>
             <div class="input-container">
               <label for="BottleBody">Escolha o corpo da garrafa</label>
-              <select name="BottleBody" id="BottleBody">
+              <select name="BottleBody" id="BottleBody" v-model="BottleBody">
                 <option value="">Selecione a estrutura da sua garrafa de preferência</option>
-                <option value="">Garrafa Squeeze Cilíndrica</option>
+                <option v-for="body in BottleBodies" :key="body.id" :value="body.tipo">{{body.tipo}}</option>
               </select>
             </div>
                <div class="input-container">
               <label for="BottleNameTag">Escolha a sua frase(Max: 16 caracteres)</label>
-              <input type="text" placeholder="Sua frase aqui" maxlength="16">
+              <input type="text" placeholder="Sua frase aqui" maxlength="16" v-model="BottleNameTag">
             </div>
              <div class="input-container">
               <label for="BottleNameTagSize">Escolha o tamanho do texto</label>
-              <select name="BottleNameTagSize" id="BottleNameTagSize">
+              <select name="BottleNameTagSize" id="BottleNameTagSize" v-model="BottleNameTagSize">
                 <option value="">Selecione o tamanho da fonte</option>
-                <option value="">Pequena</option>
-                <option value="">Média</option>
-                <option value="">Grande</option>
+                <option v-for="size in BottleNameTagSizes" :key="size.id" :value="size.tipo">{{size.tipo}}</option>
               </select>
             </div>
              <div class="input-container">
               <label for="BottleNameTagType">Escolha a tipografia do texto</label>
-                <select name="BottleNameTagType" id="BottleNameTagType">
+                <select name="BottleNameTagType" id="BottleNameTagType" v-model="BottleNameTagType">
                 <option value="">Selecione a tipografia da fonte</option>
                 <option value="Arial, sans-serif">Arial</option>
                 <option value="'Times New Roman', Times, serif">Times New Roman</option>
@@ -66,6 +64,36 @@
 
 export default {
   name: 'BottleForm',
+  data(){
+    return {
+      BottleBodies: null,
+      BottleNameTags: null,
+      BottleNameTagSizes: null,
+      BottleNameTagTypes: null,
+      BottleBody: null,
+      BottleNameTag: null,
+      BottleNameTagSize: null,
+      BottleNameTagType: null,
+      nome: null,
+      opcionais: [],
+      status: 'Solicitado',
+      message: null
+
+    }
+  },
+  methods: {
+    async getRequests(){
+      const requestFetch = await fetch('http://localhost:3000/Body');
+      const dataFromJason = await requestFetch.json();
+      this.BottleBodies = dataFromJason.BottleBodies;
+      this.BottleNameTags = dataFromJason.BottleNameTags;
+      this.BottleNameTagSizes = dataFromJason.BottleNameTagSizes;
+
+    }
+  },
+  mounted () {
+    this.getRequests();
+  }
 };
 </script>
 

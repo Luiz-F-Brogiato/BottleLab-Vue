@@ -1,1 +1,180 @@
-{}
+{
+  "Body": {
+    "BottleBodies": [
+      {
+        "id": 1,
+        "tipo": "Garrafa Squeeze Cilíndrica"
+      },
+      {
+        "id": 2,
+        "tipo": "Garrafa Squeeze com Corpo Ergonomicamente Curvado"
+      },
+      {
+        "id": 3,
+        "tipo": "Garrafa de Alumínio Leve"
+      },
+      {
+        "id": 4,
+        "tipo": "Garrafa Térmica Simples"
+      }
+    ],
+    "BottleNameTags": [
+      {
+        "id": 1,
+        "tipo": "Tag de Nome Clássica"
+
+      },
+      {
+        "id": 2,
+        "tipo": "Tag de Nome Circular"
+      },
+      {
+        "id": 3,
+        "tipo": "Tag de Nome com Ilhós"
+      },
+      {
+        "id": 4,
+        "tipo": "Tag de Nome Magnética"
+      }
+    ],
+    "BottleNameTagSizes": [
+      {
+        "id": 1,
+        "tipo": "Pequeno (5x3cm)"
+      },
+      {
+        "id": 2,
+        "tipo": "Médio (7x4cm)"
+      },
+      {
+        "id": 3,
+        "tipo": "Grande (10x5cm)"
+      },
+      {
+        "id": 4,
+        "tipo": "Extra Grande (12x6cm)"
+      }
+    ],
+    "BottleNameTagTypes": [
+      {
+        "id": 1,
+        "tipo": "Plástico Vinílico"
+      },
+      {
+        "id": 2,
+        "tipo": "Metal Esmaltado"
+      },
+      {
+        "id": 3,
+        "tipo": "Acrílico Transparente"
+      },
+      {
+        "id": 4,
+        "tipo": "Madeira Natural"
+      }
+    ],
+    "opcionais": [
+      {
+        "id": 1,
+        "tipo": "Cordão de Ajuste"
+      },
+      {
+        "id": 2,
+        "tipo": "Suporte de Parede"
+      },
+      {
+        "id": 3,
+        "tipo": "Capa Térmica"
+      },
+      {
+        "id": 4,
+        "tipo": "Tampa com Canudo"
+      },
+      {
+        "id": 5,
+        "tipo": "Filtro Integrado"
+      },
+      {
+        "id": 6,
+        "tipo": "Medidor de Volume"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 3,
+      "tipo": "Finalizado"
+    },
+    {
+      "id": 4,
+      "tipo": "Entregue"
+    }
+  ],
+  "bottles": [
+    {
+      "id": 1,
+      "nome": "Matheus Battisti",
+      "BottleBody": "Garrafa Squeeze Cilíndrica",
+      "BottleNameTag": "Tag de Nome Clássica",
+      "BottleNameTagSize": "Médio (7x4cm)",
+      "BottleNameTagType": "Plástico Vinílico",
+      "opcionais": [
+        "Cordão de Ajuste",
+        "Medidor de Volume"
+      ],
+      "status": "Finalizado",
+      "observacoes": "Personalizar com logo da empresa"
+    },
+    {
+      "id": 2,
+      "nome": "João Coelho",
+      "BottleBody": "Garrafa de Alumínio Leve",
+      "BottleNameTag": "Tag de Nome Magnética",
+      "BottleNameTagSize": "Pequeno (5x3cm)",
+      "BottleNameTagType": "Metal Esmaltado",
+      "opcionais": [
+        "Capa Térmica",
+        "Tampa com Canudo"
+      ],
+      "status": "Solicitado",
+      "observacoes": "Cor azul metálico"
+    },
+    {
+      "id": 3,
+      "nome": "Ana Silva",
+      "BottleBody": "Garrafa Térmica Simples",
+      "BottleNameTag": "Tag de Nome Circular",
+      "BottleNameTagSize": "Grande (10x5cm)",
+      "BottleNameTagType": "Acrílico Transparente",
+      "opcionais": [
+        "Suporte de Parede",
+        "Filtro Integrado"
+      ],
+      "status": "Em produção",
+      "observacoes": "Entregar até sexta-feira"
+    },
+    {
+      "id": 4,
+      "nome": "Carlos Santos",
+      "BottleBody": "Garrafa Squeeze com Corpo Ergonomicamente Curvado",
+      "BottleNameTag": "Tag de Nome com Ilhós",
+      "BottleNameTagSize": "Extra Grande (12x6cm)",
+      "BottleNameTagType": "Madeira Natural",
+      "opcionais": [
+        "Cordão de Ajuste",
+        "Capa Térmica",
+        "Medidor de Volume"
+      ],
+      "status": "Solicitado",
+      "observacoes": "Personalização corporativa"
+    }
+  ]
+}

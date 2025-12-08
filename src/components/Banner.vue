@@ -13,7 +13,7 @@ export default {
         background-image: url('/home/luiz/Documents/Code/vuejs-project/bottlelab/public/img/BannerImage.png');
         height: 900px;
         background-position: 200px -175px;
-        bakckground-repeat: no-repeat;
+        background-repeat: no-repeat;
         background-size: cover;
         display: flex;
         align-items: center;
